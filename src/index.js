@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import Menu from './components/Menu';
+import App from './App';
+import BannerMain from './components/BannerMain';
+import Carousel from './components/Carousel';
 
 ReactDOM.render(
   <React.StrictMode>
     
-      <Menu />
+      <App/>
     
   </React.StrictMode>,
   document.getElementById('root')
