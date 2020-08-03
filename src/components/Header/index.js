@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import {Link} from 'react-router-dom';
 
 function Menu () {
 
@@ -37,9 +37,11 @@ function Menu () {
 
     return(
         <Header as='div'>
-            <img src="https://fontmeme.com/permalink/200730/43cfa9a7ab0042a0c9f3084038f4e273.png" />
+            <Link to = "/">
+                <img src="https://fontmeme.com/permalink/200730/43cfa9a7ab0042a0c9f3084038f4e273.png" />
+            </Link>
 
-            <Button className="ButtonLink" href= "www.google.com" fontSize={5}> 
+            <Button as={Link} className="ButtonLink" fontSize={5} to="/cadastro/video"> 
                 <h3 >Novo filme</h3>
             </Button>
         </Header>

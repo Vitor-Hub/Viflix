@@ -3,13 +3,34 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import App from './App';
-import BannerMain from './components/BannerMain';
-import Carousel from './components/Carousel';
+
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
+ 
+function CadastroVideo() {
+  return(
+    <div>
+      Página de Cadastro de Video
+    </div>
+  )
+}
+const erro = () => {
+  return(
+    <div>
+      Erro 404
+    </div>
+  );
+}
 
 ReactDOM.render(
   <React.StrictMode>
     
-      <App/>
+      <BrowserRouter>
+        <Switch>
+          <Route path = "/cadastro/video" component={CadastroVideo} />
+          <Route path = "/" component={App} exact/>
+          <Route component={erro}/>
+        </Switch>
+      </BrowserRouter>
     
   </React.StrictMode>,
   document.getElementById('root')
